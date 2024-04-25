@@ -6,15 +6,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item {{ ($title === " Home") ? 'active' : '' }}">
+            <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item {{ ($title === " About") ? 'active' : '' }}">
+            <li class="nav-item {{ ($title === "About") ? 'active' : '' }}">
                 <a class="nav-link" href="/about">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-            </li>
+
         </ul>
     </div>
     </div>
