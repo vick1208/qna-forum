@@ -1,8 +1,5 @@
 @extends('layout.main')
 
-
 @section('container')
-
-<h1>Halaman Home</h1>
-
+<h1>Halaman About</h1>
 @endsection

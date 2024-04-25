@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        return view('home',['title' => 'Forum Kita']);
+    public function about(){
+        return view('about',['title' => 'About']);
     }
 }
