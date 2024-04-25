@@ -12,3 +12,7 @@ Kelompok 2
 ## Tema Project
 
 Forum Tanya Jawab
+
+## ERD
+
+<!-- Bagian ini diisi diagram ERD Project -->
