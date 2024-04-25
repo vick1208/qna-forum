@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ReplyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,4 +29,7 @@ Route::get('/category/{category}/edit',[CategoryController::class,'edit']);
 Route::match(['put','patch'],'/category/{category}',[CategoryController::class,'update']);
 Route::delete('/category/{category}',[CategoryController::class,'destroy']);
 
+Route::resource('/post',QuestionController::class);
+
+Route::post('/reply/{post}',[ReplyController::class,'store']);
 

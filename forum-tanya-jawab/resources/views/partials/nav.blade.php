@@ -12,6 +12,9 @@
             <li class="nav-item {{ ($title === "About") ? 'active' : '' }}">
                 <a class="nav-link" href="/about">About</a>
             </li>
+            <li class="nav-item {{ ($title === "Category") ? 'active' : '' }}">
+                <a class="nav-link" href="/category">Category</a>
+            </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
