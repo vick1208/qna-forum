@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Reply extends Model
 {
@@ -12,12 +12,12 @@ class Reply extends Model
 
     protected $guarded = ['id'];
 
-    public function user(): BelongsTo
+    public function users(): BelongsToMany
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class);
     }
-    public function question(): BelongsTo
+    public function questions(): BelongsToMany
     {
-        return $this->belongsTo(Question::class);
+        return $this->belongsToMany(Question::class);
     }
 }
