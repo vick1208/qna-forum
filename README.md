@@ -16,3 +16,7 @@ Forum Tanya Jawab
 ## ERD
 
 <!-- Bagian ini diisi diagram ERD Project -->
+
+## Link mengenai Project
+<!-- Bagian Video -->
+<!-- Bagian Situs Heroku/Hostingan/Hosting lain -->
