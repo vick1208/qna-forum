@@ -11,7 +11,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('post.index',['title' => 'Question']);
+        return view('post.index',['title' => 'Post']);
     }
 
     /**
@@ -19,7 +19,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create',['title'=> 'Create Post']);
     }
 
     /**
