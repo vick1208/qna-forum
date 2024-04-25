@@ -12,7 +12,15 @@
             <li class="nav-item {{ ($title === "About") ? 'active' : '' }}">
                 <a class="nav-link" href="/about">About</a>
             </li>
+        </ul>
 
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-primary" href="#">Login</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
         </ul>
     </div>
     </div>
