@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <input id="age" type="number" class="form-control @error('age') is-invalid @enderror"
-                                    name="age" value="{{ old('age') }}" autocomplete="age" min="0" max="70" autofocus>
+                                    name="age" value="{{ old('age') }}" min="0" max="70" autofocus>
 
                                 @error('age')
                                 <span class="invalid-feedback" role="alert">
@@ -43,11 +43,23 @@
                             <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
 
                             <div class="col-md-6">
-                                {{-- <textarea class="form-control @error('address') is-invalid @enderror"
-                                    name="address" autofocus></textarea> --}}
-                                <textarea name="address" id="address" cols="4" rows="5"
-                                    class="form-control @error('address') is-invalid @enderror"></textarea>
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror"
+                                    name="address" value="{{ old('address') }}" autofocus>
+
                                 @error('address')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="bio" class="col-md-4 col-form-label text-md-end">{{ __('Bio') }}</label>
+
+                            <div class="col-md-6">
+                                <textarea name="bio" id="bio" cols="4" rows="5"
+                                    class="form-control @error('bio') is-invalid @enderror"></textarea>
+                                @error('bio')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

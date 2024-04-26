@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'age' => ['required'],
+            'bio' => ['nullable'],
             'address' => ['required'],
         ]);
     }
@@ -75,6 +76,7 @@ class RegisterController extends Controller
         Profile::create([
             'address' => $data['address'],
             'age' => $data['age'],
+            'bio' => $data['bio'],
             'user_id' => $user->id,
         ]);
 
