@@ -25,18 +25,20 @@ Route::get('/about',function () {
     return view('about',['title' => 'About']);
 });
 
-Route::get('/category',[CategoryController::class,'index']);
-Route::get('/category/create',[CategoryController::class,'create']);
-Route::post('/category',[CategoryController::class,'store']);
-Route::get('/category/{category}/edit',[CategoryController::class,'edit']);
-Route::match(['put','patch'],'/category/{category}',[CategoryController::class,'update']);
-Route::delete('/category/{category}',[CategoryController::class,'destroy']);
+Route::middleware(['auth'])->group(function(){
+    Route::get('/category',[CategoryController::class,'index']);
+    Route::get('/category/create',[CategoryController::class,'create']);
+    Route::post('/category',[CategoryController::class,'store']);
+    Route::get('/category/{category}/edit',[CategoryController::class,'edit']);
+    Route::match(['put','patch'],'/category/{category}',[CategoryController::class,'update']);
+    Route::delete('/category/{category}',[CategoryController::class,'destroy']);
+
+
+    Route::post('/reply/{post}',[ReplyController::class,'store']);
+});
 
 Route::resource('/post',QuestionController::class);
 
-Route::post('/reply/{post}',[ReplyController::class,'store']);
-
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

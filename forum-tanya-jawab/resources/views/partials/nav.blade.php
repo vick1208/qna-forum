@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ddd3d3;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fffafa;">
     <a class="navbar-brand" href="/">Forum Kita</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,12 +15,34 @@
             <li class="nav-item {{ ($title === "Post") ? 'active' : '' }}">
                 <a class="nav-link" href="/post">Posts</a>
             </li>
+            @auth
+            <li class="nav-item {{ ($title === "Category") ? 'active' : '' }}">
+                <a class="nav-link" href="/category">Categories</a>
+            </li>
+            @endauth
         </ul>
 
         <ul class="navbar-nav ml-auto">
+            @guest
             <li class="nav-item">
                 <a class="btn btn-primary" href="/login">Login</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+            @endguest
+            @auth
+            <li class="nav-item">
+                <a class="nav-link btn btn-warning" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </li>
+            @endauth
         </ul>
     </div>
     </div>
