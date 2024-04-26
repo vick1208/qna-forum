@@ -19,10 +19,7 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="btn btn-primary" href="#">Login</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="btn btn-primary" href="/login">Login</a>
             </li>
         </ul>
     </div>
