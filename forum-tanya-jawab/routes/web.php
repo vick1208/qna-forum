@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ReplyController;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,9 @@ Route::middleware(['auth'])->group(function(){
 
 
     Route::post('/reply/{post}',[ReplyController::class,'store']);
+
+    Route::get('/profile',[ProfileController::class,'index']);
+    Route::match(['put','patch'],'/profile/{profile}',[ProfileController::class,'update']);
 });
 
 Route::resource('/post',QuestionController::class);

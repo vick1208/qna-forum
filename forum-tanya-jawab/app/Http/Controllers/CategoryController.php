@@ -20,7 +20,7 @@ class CategoryController extends Controller
     {
         dd($request);
     }
-    public function edit()
+    public function edit(string $id)
     {
         return view('category.edit');
     }
