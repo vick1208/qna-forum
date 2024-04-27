@@ -22,12 +22,12 @@
     </div>
     <div class="form-group">
         <label for="address">Address</label>
-        <input type="text" name="address" id="address" class="form-control" value="{{ $profile->address }}" placeholder="Alamat User">
+        <input type="text" name="address" id="address" class="form-control" value="{{ $profile->address }}">
 
     </div>
     <div class="form-group">
         <label for="age">Age</label>
-        <input type="number" name="age" id="age" class="form-control" value="{{ $profile->age }}" min="0" max="90" placeholder="Umur User">
+        <input type="number" name="age" id="age" class="form-control" value="{{ $profile->age }}" min="0" max="90" >
 
     </div>
     <div class="form-group">
