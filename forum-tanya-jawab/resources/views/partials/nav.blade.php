@@ -1,10 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fffafa;">
     <a class="navbar-brand" href="/">Forum Kita</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item {{ ($title === " Home") ? 'active' : '' }}">
                 <a class="nav-link" href="/">Home</a>
@@ -22,7 +21,7 @@
             @endauth
         </ul>
 
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
             @guest
             <li class="nav-item">
                 <a class="btn btn-primary" href="/login">Login</a>
@@ -33,23 +32,25 @@
             @endguest
             @auth
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg-right">
-                    <a class="dropdown-item" href="/profile">Edit Profile</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="nav-link btn btn-warning" href="{{ route('logout') }}" onclick="event.preventDefault();
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-right">
+                    <li><a class="dropdown-item" href="/profile">Edit Profile</a>
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item " href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
             </li>
-
 
             @endauth
         </ul>
