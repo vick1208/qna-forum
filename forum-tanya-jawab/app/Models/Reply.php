@@ -12,7 +12,7 @@ class Reply extends Model
 
     protected $guarded = ['id'];
 
-    public function users(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

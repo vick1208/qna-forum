@@ -29,7 +29,7 @@
 </div>
 @elseif($bagian == 'kanan')
 <form action="{{url()->current()}}" method="get">
-    <input type="text" name="search" id="search-input" placeholder="Search..." value="{{$_REQUEST['search']}}">
+    <input type="text" name="search" id="search-input" placeholder="Search..." value="{{$_REQUEST['search'] ?? null}}">
 </form>
 
 <div style="margin: 20px 0" class="d-flex">

@@ -11,11 +11,6 @@
             <a href="/category/create" class="btn btn-sm btn-primary " style="border-radius: 5px;"> <span data-feather="plus" class="me-2"></span>Tambah Category</a>
         </div>
     </div>
-    @if(session()->has('sukses'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('sukses') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
     @endif
 
     <div class="table-responsive">

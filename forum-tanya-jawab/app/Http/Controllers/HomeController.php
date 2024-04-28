@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +28,7 @@ class HomeController extends Controller
         $data = [
             'title' => 'Home',
             'active' => 'home',
+            'data_question' => Question::with(['category', 'user'])->withCount('replies')->get(),
             'data_kategori' => Category::paginate()
         ];
         return view('home.index', $data);

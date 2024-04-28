@@ -10,10 +10,11 @@
 @endsection
 
 @section('container')
+
 <div class="container-postingan">
-    @foreach($data_question as $postingan)
-    @include('post.postingan')
-    @endforeach
+
+    @include('post.postingan', ['postingan' => $this_post, 'show_comment' => true])
+
 </div>
 
 @endsection
