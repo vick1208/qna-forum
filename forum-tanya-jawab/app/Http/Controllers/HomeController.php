@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = [
+            'title' => 'Home',
+            'active' => 'home',
+            'data_kategori' => Category::paginate()
+        ];
+        return view('home.index', $data);
     }
-
 }

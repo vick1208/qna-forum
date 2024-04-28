@@ -17,7 +17,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    
+
     <div class="table-responsive">
         <table class="table table-striped table-sm align-middle">
             <thead class="thead bg-primary text-white">
@@ -49,4 +49,7 @@
     </div>
 </div>
 
+@endsection
+@section('js')
+swall
 @endsection
