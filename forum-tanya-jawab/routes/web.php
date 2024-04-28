@@ -27,13 +27,7 @@ Route::get('/about',function () {
 });
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/category',[CategoryController::class,'index']);
-    Route::get('/category/create',[CategoryController::class,'create']);
-    Route::post('/category',[CategoryController::class,'store']);
-    Route::get('/category/{category}/edit',[CategoryController::class,'edit']);
-    Route::match(['put','patch'],'/category/{category}',[CategoryController::class,'update']);
-    Route::delete('/category/{category}',[CategoryController::class,'destroy']);
-
+    Route::resource('/category',CategoryController::class);
 
     Route::post('/reply/{post}',[ReplyController::class,'store']);
 
