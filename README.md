@@ -16,6 +16,7 @@ Forum Tanya Jawab
 ## ERD
 
 <!-- Bagian ini diisi diagram ERD Project -->
+![ERD Forum Project](forum-tanya-jawab/public/img/ERD%20Final.png)
 
 ## Link mengenai Project
 
