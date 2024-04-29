@@ -41,7 +41,7 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $validatedData =  $request->validate([
-            'title' => ['required', 'min:3', 'max:50'],
+            'title' => ['required', 'min:3', 'max:250'],
             'category_id' => ['required'],
             'detail' => ['required'],
         ]);
@@ -86,7 +86,7 @@ class QuestionController extends Controller
     public function update(Request $request, $slug)
     {
         $validatedData =  $request->validate([
-            'title' => ['required', 'min:3', 'max:50'],
+            'title' => ['required', 'min:3', 'max:250'],
             'category_id' => ['required'],
             'detail' => ['required'],
         ]);

@@ -10,6 +10,7 @@ class Reply extends Model
 {
     use HasFactory;
 
+    protected $table = 'replies';
     protected $guarded = ['id'];
 
     public function user(): BelongsTo

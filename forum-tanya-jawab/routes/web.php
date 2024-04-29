@@ -26,8 +26,7 @@ Route::get('/about', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('/category', CategoryController::class)->except('show');
-
-    Route::post('/reply/{post}', [ReplyController::class, 'store']);
+    Route::resource('/reply', ReplyController::class)->except('show');
 
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::match(['put', 'patch'], '/profile/{profile}', [ProfileController::class, 'update']);

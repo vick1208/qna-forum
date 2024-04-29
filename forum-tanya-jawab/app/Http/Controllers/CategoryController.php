@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $validatedData =  $request->validate([
-            'name' => ['required', 'min:3', 'max:50', 'unique:categories']
+            'name' => ['required', 'min:3', 'max:250', 'unique:categories']
         ]);
         Category::create($validatedData);
         return redirect('/category')->with('sukses', 'Tambah Category Berhasil!');
@@ -88,7 +88,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $Category)
     {
         $validatedData =  $request->validate([
-            'name' => ['required', 'min:3', 'max:50', 'unique:categories']
+            'name' => ['required', 'min:3', 'max:250', 'unique:categories']
         ]);
         Category::where('id', $Category->id)->update($validatedData);
         return redirect('/category')->with('sukses', "Category Berhasil Diedit !");
