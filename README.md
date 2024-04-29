@@ -18,5 +18,7 @@ Forum Tanya Jawab
 <!-- Bagian ini diisi diagram ERD Project -->
 
 ## Link mengenai Project
-<!-- Bagian Video -->
+
+Demo Aplikasi: [Link Video](https://drive.google.com/file/d/1YdyVbIvduww5WhdWS5AYJSkMX4AjTfZe/view?usp=sharing)
+
 <!-- Bagian Situs Heroku/Hostingan/Hosting lain -->
