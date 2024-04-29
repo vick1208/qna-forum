@@ -20,6 +20,6 @@ Forum Tanya Jawab
 
 ## Link mengenai Project
 <!-- Bagian ini diisi Video Demo -->
-Demo Aplikasi: [Link Video](https://drive.google.com/file/d/1YdyVbIvduww5WhdWS5AYJSkMX4AjTfZe/view?usp=sharing)
+Demo Aplikasi: [Link Video](https://drive.google.com/file/d/1alJYDqWT-pXE74aoQfhKW5qoG92hv1qO/view?usp=sharing)
 
 <!-- Bagian Situs Heroku/Hostingan/Hosting lain -->
