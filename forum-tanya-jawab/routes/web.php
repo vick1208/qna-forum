@@ -25,7 +25,7 @@ Route::get('/about', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('/category', CategoryController::class);
+    Route::resource('/category', CategoryController::class)->except('show');
 
     Route::post('/reply/{post}', [ReplyController::class, 'store']);
 

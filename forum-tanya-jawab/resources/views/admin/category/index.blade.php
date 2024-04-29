@@ -11,7 +11,6 @@
             <a href="/category/create" class="btn btn-sm btn-primary " style="border-radius: 5px;"> <span data-feather="plus" class="me-2"></span>Tambah Category</a>
         </div>
     </div>
-    @endif
 
     <div class="table-responsive">
         <table class="table table-striped table-sm align-middle">
@@ -23,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data_category as $kategori)
+                @foreach ($data_kategori as $kategori)
                 <tr class="">
                     <td class="text-center">{{$loop->iteration}}</td>
                     <td class="text-center">{{$kategori->name}}</td>

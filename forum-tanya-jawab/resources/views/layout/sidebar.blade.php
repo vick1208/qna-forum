@@ -4,7 +4,10 @@
     <div id="horizontal-navbar">
         <div class="my-4"><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></div>
         <div class="my-4"><a href="/post/create"><i class="bi bi-plus-circle-fill"></i> Create</a></div>
-        <div class="my-4"><a href="/profile"><i class="bi bi-gear-fill"></i> Settings</a></div>
+        <div class="my-4"><a href="/profile"><i class="bi bi-person"></i> Profile</a></div>
+        <div class="my-4">
+            <a href="/category"><i class="bi bi-bookmark"></i> Category</a>
+        </div>
     </div>
 </div>
 <div class="footer">
@@ -39,7 +42,8 @@
 @foreach($data_kategori as $kategori)
 <div class="d-flex mt-2">
     {{ $kategori->name }}
-    <span class="ms-auto badge text-bg-secondary"><a href="/?category={{$kategori->name}}" class="text-light">Lihat</a></span>
+    <span class="ms-auto badge text-bg-secondary"><a href="/?category={{$kategori->name}}"
+            class="text-light">Lihat</a></span>
 </div>
 @endforeach
 <div class="footer">

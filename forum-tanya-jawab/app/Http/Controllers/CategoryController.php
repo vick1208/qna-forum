@@ -9,11 +9,11 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $data_category = Category::paginate(6);
+        $data_kategori = Category::paginate(6);
         $data = [
             'title' => 'Category',
             'active' => 'Category',
-            'data_category' => $data_category,
+            'data_kategori' => $data_kategori,
         ];
         return view('admin.category.index', $data);
     }
@@ -25,9 +25,11 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        $data_kategori = Category::paginate(6);
         $data = [
             'title' => 'Category',
-            'active' => 'Category'
+            'active' => 'Category',
+            'data_kategori' => $data_kategori
         ];
         return view('admin.category.create-edit', $data);
     }
@@ -66,10 +68,12 @@ class CategoryController extends Controller
      */
     public function edit(Category $Category)
     {
+        $data_kategori = Category::paginate(6);
         $data = [
             'title' => 'Category',
             'active' => 'Category',
-            'category' => $Category
+            'category' => $Category,
+            'data_kategori' => $data_kategori
         ];
         return view('admin.category.create-edit', $data);
     }

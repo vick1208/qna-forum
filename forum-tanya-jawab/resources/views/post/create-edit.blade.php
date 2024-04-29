@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-3"></div>
         <div class="col-md-2 ">
-            <a href="/question/create" class="btn btn-sm btn-secondary " style="border-radius: 5px;"> <span data-feather="arrow-left" class="me-2"></span>Back</a>
+            <a href="/" class="btn btn-sm btn-secondary " style="border-radius: 5px;"> <span data-feather="arrow-left" class="me-2"></span>Back</a>
         </div>
     </div>
 
